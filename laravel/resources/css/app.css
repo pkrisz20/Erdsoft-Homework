@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.navbar-brand {
+    margin-right: 50px;
+}
+
+.hover {
+    font-weight: bolder;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: white;
+}
+
+.hover:hover {
+    color: #904fd1;
+    transition: 0.8s;
+}
+
+.button {
+    background-color: #904fd1;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    z-index: 2;
+}
+
+.button:hover {
+    transform: translateY(-20%);
+    transition: 0.8s;
+}
+
+.whole {
+    padding-bottom: 0;
+}
+
+.menus {
+    position: relative;
+    top: 15px;
+    right: 20px;
+    z-index: 0;
+}
+
+.purple {
+    background-color: #904fd1;
+    position: absolute;
+    top: 21px;
+    width: 130px;
+    left: 780px;
+    z-index: 1;
+    color: #904fd1;
+}
+
+.icons {
+    position: absolute;
+    top: 5%;
+    right: 25%;
+    color: #fff;
+}
+
+.icons .sign-in:hover {
+    color: #904fd1;
+    transition: 0.8s;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+    .purple {
+        display: none;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .purple {
+        display: none;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+    .icons {
+        position: absolute;
+        top: 5%;
+        right: 10%;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .icons {
+        position: absolute;
+        top: 5%;
+        right: 1%;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .button {
+        background-color: #904fd1;
+        color: #fff;
+        padding: 0;
+        padding-right: 7px;
+        border: none;
+        z-index: 2;
+    }
+
+    .button:hover {
+        transform: translateY(-20%);
+        transition: 0.8s;
+    }
+
+    .purple {
+        background-color: #904fd1;
+        position: absolute;
+        top: 25px;
+        width: 55px;
+        left: 760px;
+        z-index: 1;
+        color: #904fd1;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .purple {
+        visibility: hidden;
+    }
+}
