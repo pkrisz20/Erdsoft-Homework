@@ -16,7 +16,7 @@ body {
 /* LINKS */
 
 .hover {
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 13px;
     letter-spacing: 4px;
     color: white;
@@ -72,12 +72,11 @@ body {
 
 .header {
     z-index: 2;
-    width: 100%;
 }
 
 .header-div {
     margin-bottom: 150px;
-    width: 100%;
+    text-align: center;
 }
 
 .centered {
@@ -128,99 +127,7 @@ body {
     font-size: 14px;
 }
 
-.card-link:hover {
-    color: #fff;
-}
-
 /* IMG UNDER BALCK CARD */
-
-.merged-div {
-    position: absolute;
-    top: 1200px;
-    z-index: -1;
-}
-
-.merged {
-    width: 100%;
-    height: auto;
-}
-
-/* 2 COLUMNS DIV */
-
-.winery {
-    margin-top: 400px;
-}
-
-.row {
-    display: flex;
-}
-
-.column {
-    flex: 50%;
-}
-
-.card1 {
-    z-index: 0;
-    padding: 70px;
-    background-color: white;
-    color: #000;
-    margin-right: 30%;
-}
-
-.title1-div {
-    text-decoration: 1px solid #000 underline;
-    text-underline-offset: 25px;
-    padding-bottom: 25px;
-}
-
-.card1-text {
-    line-height: 30px;
-    font-size: 13px;
-}
-
-.card1-link {
-    color: #904fd1;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.card1-link:hover {
-    color: #904fd1;
-}
-
-/* 2 IMAGES */
-
-.two-images {
-    position: relative;
-    top: 150px;
-    margin-right: 60%;
-}
-
-.card2 {
-    z-index: 0;
-    padding: 70px;
-    background-color: #904fd1;
-    color: #fff;
-}
-
-.title2-div {
-    text-decoration: 1px solid #fff underline;
-    text-underline-offset: 25px;
-    padding-bottom: 25px;
-}
-
-.card2-text {
-    line-height: 30px;
-    font-size: 13px;
-}
-
-.territory {
-    position: relative;
-    top: -300px;
-    left: 350px;
-    z-index: -1;
-}
 
 /* MEDIA QUERIES */
 
@@ -229,10 +136,6 @@ body {
         position: absolute;
         top: 0;
         right: 5%;
-    }
-
-    .column {
-        width: 100%;
     }
 }
 
