@@ -15,3 +15,11 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
+
+mix.js('resources/blade.php', 'public/js')
+
+    .sass('resources/css/app.css', 'resources/css');
+
+mix.js('resources/script.js', 'public/js')
+
+    .js('resources/js/app.css', 'resources/js');
