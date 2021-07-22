@@ -27,6 +27,7 @@ body {
     font-size: 13px;
     letter-spacing: 4px;
     color: $white-color;
+    padding-bottom: 0;
 }
 
 .hover:hover {
@@ -86,6 +87,7 @@ body {
 
 .whole {
     padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .menus {
@@ -687,7 +689,7 @@ hr {
     .wine-div1 {
         position: absolute;
         top: 490%;
-        right: 34%;
+        right: 26%;
     }
 }
 
@@ -1142,15 +1144,44 @@ hr {
 
     .wine-div2 {
         position: absolute;
-        top: 610%;
+        top: 605%;
         left: 80%;
         z-index: 5;
     }
 
     .wine-div1 {
         position: absolute;
-        top: 570%;
+        top: 560%;
         left: 5%;
+    }
+
+    .dropdown-menu {
+        z-index: 6;
+        display: none;
+        background-color: $black-color;
+        color: $white-color;
+
+        .dropdown-item {
+            z-index: 6;
+            font-size: 14px;
+            margin-left: 10px;
+
+            a {
+                z-index: 6;
+                text-decoration: none;
+                color: $white-color;
+                font-weight: 500;
+            }
+        }
+
+        .dropdown-item:hover {
+            background-color: $black-color;
+
+            a {
+                color: $purple;
+                transition: $transition-time;
+            }
+        }
     }
 }
 

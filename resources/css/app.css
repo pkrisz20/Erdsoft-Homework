@@ -24,6 +24,7 @@ body {
   font-size: 13px;
   letter-spacing: 4px;
   color: #fff;
+  padding-bottom: 0;
 }
 
 .hover:hover {
@@ -84,6 +85,7 @@ body {
 
 .whole {
   padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .menus {
@@ -693,7 +695,7 @@ hr {
   .wine-div1 {
     position: absolute;
     top: 490%;
-    right: 34%;
+    right: 26%;
   }
 }
 
@@ -1125,14 +1127,39 @@ hr {
   }
   .wine-div2 {
     position: absolute;
-    top: 610%;
+    top: 605%;
     left: 80%;
     z-index: 5;
   }
   .wine-div1 {
     position: absolute;
-    top: 570%;
+    top: 560%;
     left: 5%;
+  }
+  .dropdown-menu {
+    z-index: 6;
+    display: none;
+    background-color: #000;
+    color: #fff;
+  }
+  .dropdown-menu .dropdown-item {
+    z-index: 6;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .dropdown-menu .dropdown-item a {
+    z-index: 6;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+  }
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #000;
+  }
+  .dropdown-menu .dropdown-item:hover a {
+    color: #904fd1;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
   }
 }
 

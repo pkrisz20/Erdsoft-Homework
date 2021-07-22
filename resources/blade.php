@@ -47,7 +47,7 @@
           <a class="nav-link hover" href="#">ÉTTERMEK</a>
         </li>
 
-        <li class="nav-item dropdown-toggle menu-button" data-toggle="dropdown">
+        <li class="nav-item menu-button" data-toggle="dropdown">
           <a class="nav-link dropdown hover" href="#">BORKÓSTOLÓ</a>
 
           <ul class="dropdown-menu">
@@ -263,7 +263,7 @@
 
     <div class="column2">
 
-        <div class="wine-div2 col-xl-7 col-lg-7 col-md-7 col-sm-6 col-10">
+        <div class="wine-div2 col-xl-7 col-lg-7 col-md-7 col-sm-6 col-9">
           <img class="bottle" src="tokai2.png" width="90px" height="auto">
         </div>
 
