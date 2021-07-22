@@ -1,3 +1,6 @@
+@import "config";
+@import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap%27");
+
 body {
     margin: 0;
     padding: 0;
@@ -8,7 +11,7 @@ body {
 /* /////////////////////////////////////////////////////////////////// */
 
 .navbar {
-    background-color: black;
+    background-color: $black-color;
 }
 
 .navbar-brand {
@@ -23,12 +26,49 @@ body {
     font-weight: bolder;
     font-size: 13px;
     letter-spacing: 4px;
-    color: white;
+    color: $white-color;
 }
 
 .hover:hover {
-    color: #904fd1;
-    transition: 0.8s;
+    color: $purple;
+    transition: $transition-time;
+}
+
+.menu-button {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    z-index: 6;
+    display: none;
+    background-color: $black-color;
+    color: $white-color;
+
+    .dropdown-item {
+        z-index: 6;
+        padding-bottom: 15px;
+
+        a {
+            z-index: 6;
+            text-decoration: none;
+            color: $white-color;
+            font-weight: 500;
+        }
+    }
+
+    .dropdown-item:hover {
+        background-color: $black-color;
+
+        a {
+            color: $purple;
+            transition: $transition-time;
+        }
+    }
+}
+
+.menu-button:hover .dropdown-menu {
+    display: block;
+    z-index: 6;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -36,8 +76,8 @@ body {
 /* /////////////////////////////////////////////////////////////////// */
 
 .button {
-    background-color: #904fd1;
-    color: #fff;
+    background-color: $purple;
+    color: $white-color;
     padding: 10px 30px;
     padding-bottom: 30px;
     border: none;
@@ -56,24 +96,24 @@ body {
 }
 
 /* /////////////////////////////////////////////////////////////////// */
-/* SING IN - HU | EN */
+/* SING IN - HU | EN | 日本語 */
 /* /////////////////////////////////////////////////////////////////// */
 
 .icons {
     position: absolute;
     top: 5%;
     right: 25%;
-    color: #fff;
-}
+    color: $white-color;
 
-.icons .sign-in:hover {
-    color: #904fd1;
-    transition: 0.8s;
-}
+    .sign-in:hover {
+        color: $purple;
+        transition: $transition-time;
+    }
 
-.icons a {
-    text-decoration: none;
-    color: #fff;
+    a {
+        text-decoration: none;
+        color: $white-color;
+    }
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -95,14 +135,15 @@ body {
 }
 
 .centered {
-    color: #fff;
+    font-family: $font-family;
+    color: $white-color;
     font-size: 50px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: $fifty-percent;
+    left: $fifty-percent;
     z-index: 3;
     font-weight: bold;
-    transform: translate(-50%, -50%);
+    transform: translate(-$fifty-percent, -$fifty-percent);
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -116,14 +157,22 @@ body {
 .card {
     z-index: 0;
     padding: 70px;
-    background-color: black;
-    color: #fff;
+    background-color: $black-color;
+    color: $white-color;
+
+    h6 {
+        font-family: $font-family;
+    }
 }
 
 .title-div {
-    text-decoration: 1px solid #fff underline;
+    text-decoration: 1px solid $white-color underline;
     text-underline-offset: 25px;
     padding-bottom: 25px;
+
+    h1 {
+        font-family: $font-family;
+    }
 }
 
 .card-subtitle {
@@ -138,14 +187,14 @@ body {
 }
 
 .card-link {
-    color: #fff;
+    color: $white-color;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
 }
 
 .card-link:hover {
-    color: #fff;
+    color: $white-color;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -176,21 +225,29 @@ body {
 }
 
 .column {
-    flex: 50%;
+    flex: $fifty-percent;
 }
 
 .card1 {
     z-index: 0;
     padding: 70px;
-    background-color: white;
-    color: #000;
+    background-color: $white-color;
+    color: $black-color;
     margin-right: 15%;
+
+    p {
+        color: $gray;
+    }
 }
 
 .title1-div {
-    text-decoration: 1px solid #000 underline;
+    text-decoration: 1px solid $black-color underline;
     text-underline-offset: 25px;
     padding-bottom: 25px;
+
+    h1 {
+        font-family: $font-family;
+    }
 }
 
 .card1-text {
@@ -199,14 +256,14 @@ body {
 }
 
 .card1-link {
-    color: #904fd1;
+    color: $purple;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
 }
 
 .card1-link:hover {
-    color: #904fd1;
+    color: $purple;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -222,14 +279,18 @@ body {
 .card2 {
     z-index: 0;
     padding: 70px;
-    background-color: #904fd1;
-    color: #fff;
+    background-color: $purple;
+    color: $white-color;
 }
 
 .title2-div {
-    text-decoration: 1px solid #fff underline;
+    text-decoration: 1px solid $white-color underline;
     text-underline-offset: 25px;
     padding-bottom: 25px;
+
+    h1 {
+        font-family: $font-family;
+    }
 }
 
 .card2-text {
@@ -254,32 +315,32 @@ body {
 
 .img-gallery-nav {
     display: flex;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid $black-color;
 }
 
 .img-gallery-menu {
     flex-direction: column;
+    font-size: 18px;
     padding: 15px;
     list-style-type: none;
 }
 
 .img-gallery-menu:hover {
-    font-weight: bolder;
-    color: #000;
+    color: $black-color;
 
     .link {
-        color: #000;
+        color: $hover-color;
     }
 
     .active {
-        color: #000;
+        color: $black-color;
         font-weight: bold;
     }
 }
 
 .link {
     text-decoration: none;
-    color: #000;
+    color: $black-color;
 }
 
 .active {
@@ -315,26 +376,31 @@ body {
 }
 
 .column1 {
-    flex: 50%;
+    flex: $fifty-percent;
 }
 
 .card3 {
     padding-right: 70px;
     padding-left: 70px;
     padding-bottom: 70px;
-    color: #000;
+    color: $black-color;
 }
 
 .title3-div {
-    text-decoration: 1px solid #000 underline;
+    text-decoration: 1px solid $black-color underline;
     text-underline-offset: 25px;
     padding-bottom: 25px;
+
+    h1 {
+        font-family: $font-family;
+    }
 }
 
 .card3-text {
     margin-right: 60%;
     line-height: 30px;
     font-size: 13px;
+    color: $gray;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -343,16 +409,16 @@ body {
 
 .kupon-div {
     margin-top: 150px;
-    background-color: #904fd1;
+    background-color: $purple;
     padding: 100px 100px;
-    color: #fff;
+    color: $white-color;
 }
 
 #kupon-title {
     text-align: center;
     font-size: 36px;
     letter-spacing: 5px;
-    text-decoration: 1px solid #fff underline;
+    text-decoration: 1px solid $white-color underline;
     text-underline-offset: 25px;
 }
 
@@ -373,7 +439,7 @@ body {
 }
 
 .column2 {
-    flex: 50%;
+    flex: $fifty-percent;
 }
 
 .wine-div2 {
@@ -389,40 +455,44 @@ body {
 }
 
 hr {
-    border-top: 1px solid black;
+    border-top: 1px solid $black-color;
 }
 
 .card4 {
     padding: 50px;
-    background-color: #dddddd;
+    background-color: $card-color;
     width: 550px;
     height: 500px;
 }
 
 .card-body4 {
     margin-top: 50px;
+
+    h5 {
+        font-family: $font-family;
+    }
 }
 
 .card-title4 {
     font-weight: bold;
     font-size: 26px;
-    color: #000;
+    color: $black-color;
     padding-bottom: 10px;
 }
 
 .card4-link {
-    color: #904fd1;
+    color: $purple;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
 }
 
 .arrow {
-    color: #878787;
+    color: $gray;
 }
 
 .p-text {
-    color: #878787;
+    color: $gray;
 }
 
 .price {
@@ -436,19 +506,23 @@ hr {
 
 .card5 {
     padding: 50px;
-    background-color: #dddddd;
+    background-color: $card-color;
     width: 550px;
     height: 500px;
 }
 
 .card-body5 {
     margin-top: 50px;
+
+    h5 {
+        font-family: $font-family;
+    }
 }
 
 .card-title5 {
     font-weight: bold;
     font-size: 26px;
-    color: #000;
+    color: $black-color;
 }
 
 .card-text5 {
@@ -461,8 +535,8 @@ hr {
 }
 
 .buy-button {
-    background-color: #904fd1;
-    color: #fff;
+    background-color: $purple;
+    color: $white-color;
     padding: 5px 20px;
     border: none;
     border-radius: 50px;
@@ -504,12 +578,12 @@ hr {
         width: 100%;
     }
     .navbar {
-        background-color: black;
+        background-color: $black-color;
         z-index: 4;
     }
     .button {
-        background-color: #904fd1;
-        color: #fff;
+        background-color: $purple;
+        color: $white-color;
         padding: 10px 30px;
         border: none;
         position: absolute;
@@ -520,7 +594,7 @@ hr {
         font-weight: bolder;
         font-size: 13px;
         letter-spacing: 4px;
-        color: white;
+        color: $white-color;
         padding-bottom: 20px;
     }
 
@@ -531,8 +605,8 @@ hr {
     .card1 {
         z-index: 0;
         padding: 70px;
-        background-color: white;
-        color: #000;
+        background-color: $white-color;
+        color: $black-color;
         margin-right: 0;
     }
 }
@@ -559,13 +633,13 @@ hr {
         padding-right: 50px;
         padding-left: 50px;
         padding-bottom: 100px;
-        color: #000;
+        color: $black-color;
     }
 
     .wine-div1 {
         position: absolute;
         top: 530%;
-        right: 50%;
+        right: $fifty-percent;
     }
 }
 
@@ -581,21 +655,21 @@ hr {
     }
 
     .centered {
-        color: #fff;
+        color: $white-color;
         font-size: 50px;
         position: absolute;
         top: 40%;
-        left: 50%;
+        left: $fifty-percent;
         z-index: 3;
         font-weight: bold;
-        transform: translate(-50%, -50%);
+        transform: translate(-$fifty-percent, -$fifty-percent);
     }
 
     .card3 {
         padding-right: 70px;
         padding-left: 70px;
         padding-bottom: 100px;
-        color: #000;
+        color: $black-color;
     }
 
     .card3-text {
@@ -623,8 +697,8 @@ hr {
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
     .button {
-        background-color: #904fd1;
-        color: #fff;
+        background-color: $purple;
+        color: $white-color;
         padding: 10px;
         padding-right: 7px;
         border: none;
@@ -634,7 +708,7 @@ hr {
     .hover {
         font-weight: bolder;
         font-size: 13px;
-        color: white;
+        color: $white-color;
     }
 
     .icons {
@@ -644,14 +718,14 @@ hr {
     }
 
     .centered {
-        color: #fff;
+        color: $white-color;
         font-size: 50px;
         position: absolute;
         top: 30%;
-        left: 50%;
+        left: $fifty-percent;
         z-index: 3;
         font-weight: bold;
-        transform: translate(-50%, -50%);
+        transform: translate(-$fifty-percent, -$fifty-percent);
     }
 
     .merged-div {
@@ -668,7 +742,7 @@ hr {
         padding-right: 40px;
         padding-left: 40px;
         padding-bottom: 100px;
-        color: #000;
+        color: $black-color;
     }
 
     .card3-text {
@@ -700,14 +774,14 @@ hr {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .centered {
-        color: #fff;
+        color: $white-color;
         font-size: 35px;
         position: absolute;
         top: 30%;
-        left: 50%;
+        left: $fifty-percent;
         z-index: 3;
         font-weight: bold;
-        transform: translate(-50%, -50%);
+        transform: translate(-$fifty-percent, -$fifty-percent);
     }
 
     .merged-div {
@@ -725,8 +799,8 @@ hr {
     .card2 {
         z-index: 0;
         padding: 70px;
-        background-color: #904fd1;
-        color: #fff;
+        background-color: $purple;
+        color: $white-color;
     }
     .territory {
         position: relative;
@@ -744,7 +818,7 @@ hr {
         padding-right: 40px;
         padding-left: 40px;
         padding-bottom: 100px;
-        color: #000;
+        color: $black-color;
     }
 
     .card3-text {
@@ -757,7 +831,7 @@ hr {
         text-align: center;
         font-size: 25px;
         letter-spacing: 2px;
-        text-decoration: 1px solid #fff underline;
+        text-decoration: 1px solid $white-color underline;
         text-underline-offset: 15px;
     }
 
@@ -773,7 +847,7 @@ hr {
 
     .img-gallery-nav {
         display: flex;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $black-color;
     }
 
     .img-gallery-menu {
@@ -784,7 +858,7 @@ hr {
 
     .link {
         text-decoration: none;
-        color: #000;
+        color: $black-color;
     }
 
     .active {
@@ -814,14 +888,14 @@ hr {
     }
 
     .centered {
-        color: #fff;
+        color: $white-color;
         font-size: 30px;
         position: absolute;
         top: 200px;
-        left: 50%;
+        left: $fifty-percent;
         z-index: 3;
         font-weight: bold;
-        transform: translate(-50%, -50%);
+        transform: translate(-$fifty-percent, -$fifty-percent);
     }
 
     .merged-div {
@@ -840,8 +914,8 @@ hr {
     .card2 {
         z-index: 0;
         padding: 70px;
-        background-color: #904fd1;
-        color: #fff;
+        background-color: $purple;
+        color: $white-color;
         flex: 100%;
     }
     .territory {
@@ -856,7 +930,7 @@ hr {
         padding-right: 70px;
         padding-left: 70px;
         padding-bottom: 100px;
-        color: #000;
+        color: $black-color;
     }
 
     .card3-text {
@@ -867,15 +941,15 @@ hr {
 
     .kupon-div {
         margin-top: 40px;
-        background-color: #904fd1;
+        background-color: $purple;
         padding: 20px 20px;
-        color: #fff;
+        color: $white-color;
     }
 
     #kupon-title {
         text-align: center;
         font-size: 20px;
-        text-decoration: 1px solid #fff underline;
+        text-decoration: 1px solid $white-color underline;
         text-underline-offset: 2px;
     }
 
@@ -898,23 +972,23 @@ hr {
     .img-gallery-menu {
         padding: 10px;
         list-style-type: none;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $black-color;
         transition: 0.3s;
     }
 
     .img-gallery-menu:hover {
         font-weight: bolder;
-        color: #000;
-        border-bottom: 4px solid #000;
+        color: $black-color;
+        border-bottom: 4px solid $black-color;
 
         .link {
-            color: #000;
+            color: $black-color;
         }
     }
 
     .link {
         text-decoration: none;
-        color: #000;
+        color: $black-color;
     }
 
     .active {
@@ -944,21 +1018,21 @@ hr {
     }
 
     .centered {
-        color: #fff;
+        color: $white-color;
         font-size: 25px;
         position: absolute;
         top: 160px;
-        left: 50%;
+        left: $fifty-percent;
         z-index: 3;
         font-weight: bold;
-        transform: translate(-50%, -50%);
+        transform: translate(-$fifty-percent, -$fifty-percent);
     }
 
     .hover {
         font-weight: bolder;
         font-size: 13px;
         letter-spacing: 4px;
-        color: white;
+        color: $white-color;
         padding-bottom: 20px;
         margin-left: 40px;
     }
@@ -979,8 +1053,8 @@ hr {
     .card2 {
         z-index: 0;
         padding: 70px;
-        background-color: #904fd1;
-        color: #fff;
+        background-color: $purple;
+        color: $white-color;
         flex: 100%;
     }
     .territory {
@@ -995,7 +1069,7 @@ hr {
         padding-right: 30px;
         padding-left: 30px;
         padding-bottom: 100px;
-        color: #000;
+        color: $black-color;
     }
 
     .card3-text {
@@ -1006,15 +1080,15 @@ hr {
 
     .kupon-div {
         margin-top: 20px;
-        background-color: #904fd1;
+        background-color: $purple;
         padding: 20px 20px;
-        color: #fff;
+        color: $white-color;
     }
 
     #kupon-title {
         text-align: center;
         font-size: 20px;
-        text-decoration: 1px solid #fff underline;
+        text-decoration: 1px solid $white-color underline;
         text-underline-offset: 5px;
     }
 
@@ -1043,23 +1117,23 @@ hr {
     .img-gallery-menu {
         padding: 10px;
         list-style-type: none;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $black-color;
         transition: 0.3s;
     }
 
     .img-gallery-menu:hover {
         font-weight: bolder;
-        color: #000;
-        border-bottom: 4px solid #000;
+        color: $black-color;
+        border-bottom: 4px solid $black-color;
 
         .link {
-            color: #000;
+            color: $black-color;
         }
     }
 
     .link {
         text-decoration: none;
-        color: #000;
+        color: $black-color;
     }
 
     .active {
@@ -1075,7 +1149,7 @@ hr {
 
     .wine-div1 {
         position: absolute;
-        top: 568%;
+        top: 570%;
         left: 5%;
     }
 }
@@ -1096,6 +1170,14 @@ hr {
     .wine-div1 {
         position: absolute;
         top: 530%;
-        right: 20%;
+        right: 19%;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .wine-div1 {
+        position: absolute;
+        top: 530%;
+        right: 16%;
     }
 }

@@ -31,11 +31,11 @@
 <!--LOGO + LINKS-->
 <!--//////////////////////////////////////////////////////////////////////////////////////////-->
 
-  <div class="icons"><a class="sign-in" href="#"><i class="fas fa-user"></i> BELÉPÉS</a> | <a href="#">HU</a> | <a href="#">EN</a></div>
+  <div class="icons"><a class="sign-in" href="#"><i class="fas fa-user"></i> BELÉPÉS</a> | <a href="#">HU</a> | <a href="#">EN</a> | <a href="#">日本語</a></div>
     <div class="collapse navbar-collapse menus col-lg-10" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link hover" href="#">NYITÓLAP </a>
+          <a class="nav-link hover" href="#">NYITÓLAP</a>
         </li>
         <li class="nav-item">
           <a class="nav-link hover" href="#">A BIRTOK</a>
@@ -46,9 +46,17 @@
         <li class="nav-item">
           <a class="nav-link hover" href="#">ÉTTERMEK</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link hover" href="#">BORKÓSTOLÓ</a>
+
+        <li class="nav-item dropdown-toggle menu-button" data-toggle="dropdown">
+          <a class="nav-link dropdown hover" href="#">BORKÓSTOLÓ</a>
+
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="#">EXKLUZIV BORKÓSTOLÓ MÁDON</a></li>
+            <li class="dropdown-item"><a href="#">CÉGES ÉS MAGÁN RENDEZVÉNYEK MÁDON</a></li>
+            <li class="dropdown-item"><a href="#">BORKÓSTOLÁS CÉGES ÉS MAGÁN RENDEZVÉNYEKEN MÁDON KIVÜL</a></li>
+          </ul>
         </li>
+
         <li class="nav-item">
           <a class="nav-link hover" href="#">HIREK</a>
         </li>
@@ -73,7 +81,7 @@
 <div class="centered">A birtok</div>
 
   <div class="row header-div">
-    <img class="header " src="header-edited.jpg">
+    <img class="header" src="header-edited.jpg">
   </div>
 
   <div class="row black-card mb-4 col-xl-5 col-xxl-4 col-md-8 col-sm-10 col-12">

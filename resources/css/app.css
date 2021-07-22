@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap%27");
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@ body {
 /* NAVBAR */
 /* /////////////////////////////////////////////////////////////////// */
 .navbar {
-  background-color: black;
+  background-color: #000;
 }
 
 .navbar-brand {
@@ -21,13 +23,51 @@ body {
   font-weight: bolder;
   font-size: 13px;
   letter-spacing: 4px;
-  color: white;
+  color: #fff;
 }
 
 .hover:hover {
   color: #904fd1;
   -webkit-transition: 0.8s;
   transition: 0.8s;
+}
+
+.menu-button {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  z-index: 6;
+  display: none;
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdown-menu .dropdown-item {
+  z-index: 6;
+  padding-bottom: 15px;
+}
+
+.dropdown-menu .dropdown-item a {
+  z-index: 6;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #000;
+}
+
+.dropdown-menu .dropdown-item:hover a {
+  color: #904fd1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.menu-button:hover .dropdown-menu {
+  display: block;
+  z-index: 6;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -54,7 +94,7 @@ body {
 }
 
 /* /////////////////////////////////////////////////////////////////// */
-/* SING IN - HU | EN */
+/* SING IN - HU | EN | 日本語 */
 /* /////////////////////////////////////////////////////////////////// */
 .icons {
   position: absolute;
@@ -92,6 +132,7 @@ body {
 }
 
 .centered {
+  font-family: "Rozha One", serif;
   color: #fff;
   font-size: 50px;
   position: absolute;
@@ -113,8 +154,12 @@ body {
 .card {
   z-index: 0;
   padding: 70px;
-  background-color: black;
+  background-color: #000;
   color: #fff;
+}
+
+.card h6 {
+  font-family: "Rozha One", serif;
 }
 
 .title-div {
@@ -122,6 +167,10 @@ body {
           text-decoration: 1px solid #fff underline;
   text-underline-offset: 25px;
   padding-bottom: 25px;
+}
+
+.title-div h1 {
+  font-family: "Rozha One", serif;
 }
 
 .card-subtitle {
@@ -182,9 +231,13 @@ body {
 .card1 {
   z-index: 0;
   padding: 70px;
-  background-color: white;
+  background-color: #fff;
   color: #000;
   margin-right: 15%;
+}
+
+.card1 p {
+  color: #878787;
 }
 
 .title1-div {
@@ -192,6 +245,10 @@ body {
           text-decoration: 1px solid #000 underline;
   text-underline-offset: 25px;
   padding-bottom: 25px;
+}
+
+.title1-div h1 {
+  font-family: "Rozha One", serif;
 }
 
 .card1-text {
@@ -233,6 +290,10 @@ body {
   padding-bottom: 25px;
 }
 
+.title2-div h1 {
+  font-family: "Rozha One", serif;
+}
+
 .card2-text {
   line-height: 30px;
   font-size: 13px;
@@ -264,17 +325,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 18px;
   padding: 15px;
   list-style-type: none;
 }
 
 .img-gallery-menu:hover {
-  font-weight: bolder;
   color: #000;
 }
 
 .img-gallery-menu:hover .link {
-  color: #000;
+  color: #fcca03;
 }
 
 .img-gallery-menu:hover .active {
@@ -339,10 +400,15 @@ body {
   padding-bottom: 25px;
 }
 
+.title3-div h1 {
+  font-family: "Rozha One", serif;
+}
+
 .card3-text {
   margin-right: 60%;
   line-height: 30px;
   font-size: 13px;
+  color: #878787;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -400,7 +466,7 @@ body {
 }
 
 hr {
-  border-top: 1px solid black;
+  border-top: 1px solid #000;
 }
 
 .card4 {
@@ -412,6 +478,10 @@ hr {
 
 .card-body4 {
   margin-top: 50px;
+}
+
+.card-body4 h5 {
+  font-family: "Rozha One", serif;
 }
 
 .card-title4 {
@@ -454,6 +524,10 @@ hr {
 
 .card-body5 {
   margin-top: 50px;
+}
+
+.card-body5 h5 {
+  font-family: "Rozha One", serif;
 }
 
 .card-title5 {
@@ -516,7 +590,7 @@ hr {
     width: 100%;
   }
   .navbar {
-    background-color: black;
+    background-color: #000;
     z-index: 4;
   }
   .button {
@@ -532,7 +606,7 @@ hr {
     font-weight: bolder;
     font-size: 13px;
     letter-spacing: 4px;
-    color: white;
+    color: #fff;
     padding-bottom: 20px;
   }
   .column {
@@ -543,7 +617,7 @@ hr {
   .card1 {
     z-index: 0;
     padding: 70px;
-    background-color: white;
+    background-color: #fff;
     color: #000;
     margin-right: 0;
   }
@@ -638,7 +712,7 @@ hr {
   .hover {
     font-weight: bolder;
     font-size: 13px;
-    color: white;
+    color: #fff;
   }
   .icons {
     position: absolute;
@@ -942,7 +1016,7 @@ hr {
     font-weight: bolder;
     font-size: 13px;
     letter-spacing: 4px;
-    color: white;
+    color: #fff;
     padding-bottom: 20px;
     margin-left: 40px;
   }
@@ -1057,7 +1131,7 @@ hr {
   }
   .wine-div1 {
     position: absolute;
-    top: 568%;
+    top: 570%;
     left: 5%;
   }
 }
@@ -1077,7 +1151,15 @@ hr {
   .wine-div1 {
     position: absolute;
     top: 530%;
-    right: 20%;
+    right: 19%;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .wine-div1 {
+    position: absolute;
+    top: 530%;
+    right: 16%;
   }
 }
 /*# sourceMappingURL=app.css.map */
