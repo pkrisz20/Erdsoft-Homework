@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/birtok', function () {
-    return view('blade');
+    return view('birtok');
 });
